@@ -71,7 +71,6 @@
 
 from tkinter import N
 
-
 a = 6
 b = 5 # -5 унарный минус и есть унарный плюс
 c = a + b
