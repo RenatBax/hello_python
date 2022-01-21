@@ -240,9 +240,9 @@ print(is_odd2)
 
 # Списки - введение
 numbers = [1, 2, 3, 4, 5]  # [1, 2, 3, 4, 5]
-print(numbers) # <class 'range'>
+print(numbers) 
 ran = range(1, 6)
-print(type(ran))
+print(type(ran)) # <class 'range'>
 numbers = list(ran) # приведение типа данных renge  к list
 print(type(numbers))  # <class 'list'>
 print(numbers) # [1, 2, 3, 4, 5]
