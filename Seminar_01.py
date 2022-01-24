@@ -1,10 +1,10 @@
 
-print('Задача 0. Вывести квадрат числа')
+print('Задача 0. Вывести квадрат числа.')
 
 number = int(input('Введите число: '))
 print(f'Квадрат введенного числа {number} равен {number ** 2}')
 
-print('3адача 1. По двум заданным числам проверять является ли первое квадратом второго')
+print('3адача 1. По двум заданным числам проверять является ли первое квадратом второго.')
 
 def sqrt_numbers(a, b):
     if a ** 2 == b:
@@ -12,10 +12,10 @@ def sqrt_numbers(a, b):
     else:
         print('Первое число не является квадратом второго.')
 
-print('По двум заданным числам проверьте, является ли первое квадратом второго?')
+print('По двум введенным числам проверьте, является ли первое квадратом второго?')
 sqrt_numbers(a = int(input('Введите первое число: ')), b = int(input('Введите второе число: ')))
 
-print('3адача 2. Даны два числа. Показать большее и меньшее число')
+print('3адача 2. Даны два числа. Показать большее и меньшее число.')
 
 def max_number(c, d):
     if c > d:
@@ -27,7 +27,7 @@ def max_number(c, d):
 
 print(max_number(c = int(input('Введите первое число: ')), d = int(input('Введите второе число: '))))
 
-print('3адача 3. По заданному номеру дня недели вывести его название')
+print('3адача 3. По заданному номеру дня недели вывести его название.')
 
 def show_day_of_week(day): # работает
     week = range(1, 8)
@@ -60,9 +60,18 @@ def show_day_of_week(day): # работает
 
 show_day_of_week(day = int(input('Введите день недели: ')))
 
-print('3адача 4. Найти максимальное из трех чисел')
+print('3адача 4. Найти максимальное из трех чисел.')
 
 def max_of_3_numbers(a1, a2, a3):
+    ''' Программа находит максимальное из трех чисел. 
+
+        Это пример написания документации к задаче.
+        Пишется до выполнения логических операций.
+        Документация начинается и заканчивается тремя кавычками, не забываем про табуляцию! 
+        Каждое предложение на строчке нач с загл буквы и окон точкой.
+        Между первым и вторым предложением - пустая строчка.
+                                  имя функции точка  команда
+        Выводится командой print(max_of_3_numbers.__doc__).'''
     if a2 < a1 > a3:
         return f'Max number {a1}.'
     elif a1 < a2 > a3:
@@ -70,16 +79,35 @@ def max_of_3_numbers(a1, a2, a3):
     elif a1 < a3 > a2:
         return f'Max number {a3}.'
     else:
-        return 'The numbers are equal.'
+        return f'The entered numbers are equal to, max {a1 or a2 or a3}'
 
 print(max_of_3_numbers(a1 = int(input("Enter the first number: ")), # вывод 1 способ
                         a2 = int(input("Enter the second number: ")),
                         a3 = int(input("Enter the third number: "))))
+print(max_of_3_numbers.__doc__)
 
-result = max_of_3_numbers(a1 = int(input("Enter the first number: ")), 
-                        a2 = int(input("Enter the second number: ")),
-                        a3 = int(input("Enter the third number: ")))
-print(result) # вывод 2 способ
+result = max_of_3_numbers(a1 = int(input("Enter the first number: ")), # Второй способ вывода
+        a2 = int(input("Enter the second number: ")),
+        a3 = int(input("Enter the third number: ")))
+print(result)       
+
+print('Решение 4 задачи вторым способом')
+
+def max_of_3_numbers_2():
+    nambers = []
+    count = 1
+    while count <= 3:
+        enter_number = int(input(f'Enter {count} number: '))
+        nambers.append(enter_number)
+        count = count + 1
+    nambers # список введенных чисел
+    max_number = nambers[0]
+    for i in nambers:
+        if i > max_number: max_number = i # находим мах
+    return max_number
+
+search_number = max_of_3_numbers_2()
+print(f'Max number {search_number}')
 
 print('3адача 5. Написать программу вычисления значения функции y = f(a) y=sin(x^10)') 
 
@@ -104,8 +132,10 @@ event_number(event_not_event = int(input('Введите число: ')))
 print('3адача 7. Показать числа от -N до N')
 
 def show_numbers_from_N_to_N(N):
+    segment = []
     for i in range(-N, N + 1):
-        print(i)
+        segment.append(i)
+    print(segment)
 
 show_numbers_from_N_to_N(N = int(input('Введите число N: ')))
 
@@ -149,6 +179,20 @@ def max_digit(number):
 print(f'Given a number {random_number} from the segment [10, 99]')
 max_digit(number = str(random_number))
 
+print('Решение 11 задачи вторым способом')
+def max_digit_math_way(n):
+    digit_2 = []
+    digit_2.append(n % 10)
+    
+    digit_1 = []
+    digit_1.append(n // 10)
+    
+    if digit_1[0] > digit_2[0]: return digit_1[0]
+    elif digit_1[0] < digit_2[0]: return digit_2[0]
+    else: return 'Digit are equal'
+max_digit_2 = max_digit_math_way(random_number)
+print(f'Max digit of the number: {max_digit_2}.')
+
 print('3адача 12. Удалить вторую цифру трёхзначного числа')
 
 def delete_digit_string_metod(sn):
@@ -162,6 +206,7 @@ def delete_digit_string_metod(sn):
 
 delete_digit_string_metod(sn = input('Введите трехзначное число: '))
 
+print('Решение 12 задачи вторым способом')
 def delete_number_math_metod(m):
     digit3 = m % 10
     digit1 = m // 100
@@ -198,10 +243,15 @@ def is_there_third_digit(text): # не работает с отрицатель�
 
 is_there_third_digit(text = input('Введите число: '))
 
+
+
+print('Решение 14 задачи вторым способом')
+
+import math
 def is_there_third_digit2(number1):
     if number1 > 99 or number1 < -99:
-        i = number1 // 100
-        digit = i % 10 # отриц числа делит с ощибкой
+        i = round(number1 // 100)
+        digit = i % 10 # отриц числа делит с ошибкой
         #digit = number1 // 100 % 10
         print(f'Третья цифра = {digit}.')
     else:
