@@ -192,6 +192,17 @@ def max_digit_math_way(n):
 max_digit_2 = max_digit_math_way(random_number)
 print(f'Max digit of the number: {max_digit_2}.')
 
+print('Решение 11 задачи третьим способом (NataSola)') 
+def max_digit_math_way_2(n):  
+    if n // 10 > n % 10: 
+        return n //10
+    elif n // 10 < n % 10: 
+        return n % 10
+    else: return 'Digit are equal.'
+
+max_digit_3 = max_digit_math_way_2(random_number)
+print(f'Max digit of the number: {max_digit_3}.')
+
 print('3адача 12. Удалить вторую цифру трёхзначного числа')
 
 def delete_digit_string_metod(sn):
