@@ -183,7 +183,6 @@ print('Решение 11 задачи вторым способом')
 def max_digit_math_way(n):
     digit_2 = []
     digit_2.append(n % 10)
-    
     digit_1 = []
     digit_1.append(n // 10)
     
@@ -243,16 +242,15 @@ def is_there_third_digit(text): # не работает с отрицатель�
 
 is_there_third_digit(text = input('Введите число: '))
 
-
-
 print('Решение 14 задачи вторым способом')
 
 import math
 def is_there_third_digit2(number1):
     if number1 > 99 or number1 < -99:
-        i = round(number1 // 100)
-        digit = i % 10 # отриц числа делит с ошибкой
-        #digit = number1 // 100 % 10
+        if number1 < 0:
+            digit = abs(-number1) // 100 % 10
+        else:
+            digit = number1 // 100 % 10
         print(f'Третья цифра = {digit}.')
     else:
         print('Третьей цифры в числе нет.')
