@@ -69,80 +69,78 @@
 
 # +, -, *, /, %, //, **
 
-from tkinter import N
-
-a = 6
-b = 5 # -5 унарный минус и есть унарный плюс
-c = a + b
-print(c)
-h = a - b
-print(h)
-u = a * b
-print(u)
-o = a / b
-print(o)
-i = a % b # остаток от деления
-print(i)
-p = a // b # деление в целых числах
-print(p)
-y = a ** b # возведение в степень
-print(y)
-c = 1.35678
-z = 3
-g = c * z # округляет по математ правилам
-print(g)
-t = round(c * z) # округляет по математ правилам
-print(t)
-v = round(c * z, 2) # округляет по указанной цифре после запятой 
-print(v)
+# a = 6
+# b = 5 # -5 унарный минус и есть унарный плюс
+# c = a + b
+# print(c)
+# h = a - b
+# print(h)
+# u = a * b
+# print(u)
+# o = a / b
+# print(o)
+# i = a % b # остаток от деления
+# print(i)
+# p = a // b # деление в целых числах
+# print(p)
+# y = a ** b # возведение в степень
+# print(y)
+# c = 1.35678
+# z = 3
+# g = c * z # округляет по математ правилам
+# print(g)
+# t = round(c * z) # округляет по математ правилам
+# print(t)
+# v = round(c * z, 2) # округляет по указанной цифре после запятой 
+# print(v)
 
 # сокращенные арифм операции присваивания
 # +=, -=, *=, /=
 
-r = 3
-# r = r + 5
-r += 5
-print(r)
+# r = 3
+# # r = r + 5
+# r += 5
+# print(r)
 
 # Логические операции
 # сравнения >, >=, <, <=, ==, !=
 # not, and, or - не путать с &, |, ^
 # gen
 
-u = 1 > 4
-print(u)
-c = 1 < 4 and 5 > 2
-print(c)
+# u = 1 > 4
+# print(u)
+# c = 1 < 4 and 5 > 2
+# print(c)
 
-l = 'try'
-k = 'tryy'
-print(l != k)
+# l = 'try'
+# k = 'tryy'
+# print(l != k)
 
-t = [1, 4]
-f = [1, 3]
-print(t < f)
+# t = [1, 4]
+# f = [1, 3]
+# print(t < f)
 
-s = 1 < 4 < 5 # тройные и больше не равенства
-print(s)
+# s = 1 < 4 < 5 # тройные и больше не равенства
+# print(s)
 
-func = 1
-T = 4
-x = 123
-print(func<T>(x))
+# func = 1
+# T = 4
+# x = 123
+# print(func<T>(x))
 
-fun = 1 > 2 or 4 < 6 #дизьюнкция
-print(fun)
+# fun = 1 > 2 or 4 < 6 #дизьюнкция
+# print(fun)
 
 # is, is not, in, not in
-R = [1, 2, 3, 4]
-print(R)
-print(2 in R) # 2 есть в R???
-print(not 2 in R) # наоборот
+# R = [1, 2, 3, 4]
+# print(R)
+# print(2 in R) # 2 есть в R???
+# print(not 2 in R) # наоборот
 
-is_odd = f[0] % 2 == 0 # остаток от деления равет 0
-is_odd2 = not f[0] % 2 # можно записать так - пайтоновский вариант записи
-print(is_odd)
-print(is_odd2)
+# is_odd = f[0] % 2 == 0 # остаток от деления равет 0
+# is_odd2 = not f[0] % 2 # можно записать так - пайтоновский вариант записи
+# print(is_odd)
+# print(is_odd2)
 
 # Управляющие конструкции, важны отступы
 
@@ -239,32 +237,32 @@ print(is_odd2)
 # text = text[2:9] + text[-5] + text[:2] #
 
 # Списки - введение
-numbers = [1, 2, 3, 4, 5]  # [1, 2, 3, 4, 5]
-print(numbers) 
-ran = range(1, 6)
-print(type(ran)) # <class 'range'>
-numbers = list(ran) # приведение типа данных renge  к list
-print(type(numbers))  # <class 'list'>
-print(numbers) # [1, 2, 3, 4, 5]
-numbers[0] = 10
-print(numbers) # [10, 2, 3, 4, 5]
-print(f'{len(numbers)} len') # 5 len
-for i in numbers:
-    i *= 2   
-    print(i)   # [20 4 6 8 10] по строчно
-print(numbers) # [10, 2, 3, 4, 5] изменения строкой выше не сохраняются при вызове списка
+# numbers = [1, 2, 3, 4, 5]  # [1, 2, 3, 4, 5]
+# print(numbers) 
+# ran = range(1, 6)
+# print(type(ran)) # <class 'range'>
+# numbers = list(ran) # приведение типа данных renge  к list
+# print(type(numbers))  # <class 'list'>
+# print(numbers) # [1, 2, 3, 4, 5]
+# numbers[0] = 10
+# print(numbers) # [10, 2, 3, 4, 5]
+# print(f'{len(numbers)} len') # 5 len
+# for i in numbers:
+#     i *= 2   
+#     print(i)   # [20 4 6 8 10] по строчно
+# print(numbers) # [10, 2, 3, 4, 5] изменения строкой выше не сохраняются при вызове списка
 
-colors = ['red', 'green', 'blue']
+# colors = ['red', 'green', 'blue']
 
-for e in colors:
-    print(e) # red green blue
+# for e in colors:
+#     print(e) # red green blue
 
-for e in colors: 
-    print(e * 2) # redred greengreen blueblue
+# for e in colors: 
+#     print(e * 2) # redred greengreen blueblue
 
-colors.append('grey') # добавить в конец
-print(colors == ['red', 'green', 'blue', 'gray']) #
-colors.remove('red') # del colors[0] # удалить элемент
+# colors.append('grey') # добавить в конец
+# print(colors == ['red', 'green', 'blue', 'gray']) #
+# colors.remove('red') # del colors[0] # удалить элемент
 
 # Функции
 # def function_name(x):
@@ -281,6 +279,6 @@ def f(x):
     else:
         return
 
-arg = 56
-print(f(arg))
-print(type(f(arg)))
+# arg = 56
+# print(f(arg))
+# print(type(f(arg)))
