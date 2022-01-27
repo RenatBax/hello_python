@@ -1,5 +1,8 @@
 # hello_python
-Знакомство с   Python
+Знакомство с Python
+[Cсылка на таблицу] (https://docs.google.com/spreadsheets/d/1HELlifkBcqql4kUkrxRZtCb_s6eFZaGxpuDHTXWvpc4/edit#gid=0)
+
+[Ссылка на новый список задач] (https://docs.google.com/document/d/1lfqWiTWN7bUUdZzrholy7Q9sDeInTR_R2g5tddI0aWs/edit#heading=h.ipksh3bqp07y)
 
 0 Вывести квадрат числа
 1 По двум заданным числам проверять является ли первое квадратом второго
