@@ -67,15 +67,20 @@ from random import randint
 #     count += 1
 # print(list)
 
-def create_list(len = 10, min = 1, max = 50):
-    return [randint(min, max) for i in range(len)]
+# def create_list(len = 10, min = 1, max = 50):
+#     return [randint(min, max) for i in range(len)]
 
-def create_two_dimensional_list(\
-    raw = 3, col = 4, min = 1, max = 50):
+# def create_two_dimensional_list(\
+#     raw = 3, col = 4, min = 1, max = 50):
 
-    return [[randint(min, max) for i in range(col)]\
-        for j in range(raw)]
+#     return [[randint(min, max) for i in range(col)]\
+#         for j in range(raw)]
 
-print(create_list())
+# print(create_list())
 
-print(create_two_dimensional_list())
+# print(create_two_dimensional_list())
+
+def get_cubes(namber = 6):
+    return [((-3) ** i) for i in range(namber)]
+
+print(get_cubes())
