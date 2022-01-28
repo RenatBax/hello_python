@@ -1,3 +1,4 @@
+# Семинар_01
 
 print('Задача 0. Вывести квадрат числа.')
 
@@ -166,7 +167,11 @@ print(f'The second digit of a three-digit number: {second_digit}.')
 print('3адача 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа')
 
 from random import randint
-random_number = randint(10, 100)  
+
+def get_random_number():
+    return randint(10, 100)
+
+random_number = get_random_number()
 
 def max_digit(number):
     if number[0] > number[1]:
