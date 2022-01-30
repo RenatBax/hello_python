@@ -80,7 +80,14 @@ from random import randint
 
 # print(create_two_dimensional_list())
 
-def get_cubes(namber = 6):
-    return [((-3) ** i) for i in range(namber)]
+# def get_cubes(namber = 6):
+#     return [((-3) ** i) for i in range(namber)]
 
-print(get_cubes())
+# print(get_cubes())
+
+# str = 'level'
+# for i in str:
+#     print(i)
+
+# for i in range(0, len(str)):
+#     print(f'str[{i}] = \'{str[i]}\'')
