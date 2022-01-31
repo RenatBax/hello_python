@@ -3,9 +3,12 @@
 from cmath import sqrt
 from dataclasses import replace
 from itertools import count
-from math import ceil, floor, lcm, prod
-from random import shuffle, randint
+from math import ceil, floor, lcm, prod, log2
+from random import random, shuffle, randint
+
 import string
+
+from black import re
 
 new_text = 'При первом вызове, func (3, 7), параметр a получает значение 9, параметр b \
 получает значение 11, а c получает своё значение по умолчанию, равное 10. \
@@ -48,32 +51,61 @@ new_text = 'При первом вызове, func (3, 7), параметр a п
 
 # def the_number_of_occurrences_of_one_string_in_another(s_1, s_2):
 #     count = 0
-#     symbol = '' # 
-#     for i in s_1:
-#         for j in s_2:
-#             if i == j:
-#                 count += 1
-#                 symbol += i
-#     return count, symbol
+#     symbol = ' ' # находит одинаковые символы
+#     u = 0
+#     while u < len(s_2):
+#         for i in s_1:
+#             for j in s_2:
+#                 if i == j:
+#                     count += 1
+#                     #symbol += i            
+#         u += 1
+#     return (count // u) // u
+#     #return count, symbol, u
     
-#     return s_1.count(s_2)
+# #     return s_1.count(s_2) решение с помощью библиотеки
     
-#     clear_text  = s_1\
-#         .lower()\
-#         .replace(',', '')\
-#         .replace('(', '')\
-#         .replace(')', '')\
-#         .replace('.', '')\
-#         .replace('  ', ' ') # очистка текста
-#     list_text = clear_text.split(' ') # split преобразует в лист, а (сепаратор) раздел элементы листа
-#     for i in list_text:
-#         if s_2 == i:
-#             count +=1
-#     return count
+# #     clear_text  = s_1\
+# #         .lower()\
+# #         .replace(',', '')\
+# #         .replace('(', '')\
+# #         .replace(')', '')\
+# #         .replace('.', '')\
+# #         .replace('  ', ' ') # очистка текста
+# #     list_text = clear_text.split(' ') # split преобразует в лист, а (сепаратор) раздел элементы листа
+# #     for i in list_text:
+# #         if s_2 == i:
+# #             count +=1
+# #     return count
+
+# # def the_number_of_occurrences_of_one_string_in_another_2(s_1, s_2):
+# # # решение Рустема Абубакарова
+# #     i = 0
+# #     count = 0
+# #     while i < len(s_1):
+# #         j = 0
+# #         if s_1[i] == s_2[0]:
+# #             while j < len(s_2):
+# #                 if j + i >= len(s_1) - 1:
+# #                     if j == len(s_2) - 1:
+# #                         count += 1
+# #                         break
+# #                     else: 
+# #                         break
+# #                 elif s_1[i + j] != s_2[j]: 
+# #                     break
+# #                 elif j == len(s_2) - 1: 
+# #                     count += 1 
+# #                 j += 1  
+# #         i += 1 
+# #     return count
 
 # string_1 = input('Введите любое предложение: ')
 # string_2 = input('Введите еще раз любое предложение: ')
 # print(the_number_of_occurrences_of_one_string_in_another\
+#     (string_1, string_2))
+
+# print(the_number_of_occurrences_of_one_string_in_another_2\
 #     (string_1, string_2))
 
 # print('34. Подсчитать сумму цифр в вещественном числе.')
@@ -186,12 +218,29 @@ new_text = 'При первом вызове, func (3, 7), параметр a п
 
 # print('39.Реализовать алгоритм задания случайных чисел. \
 #       Без использования встроенного генератора псевдослучайных чисел.')
+# from datetime import datetime
+# from time import sleep
 
-# def random_number(rang_s = 1, rang_e = 10):
-#     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-#     quantity = rang_e
-#     size = len(numbers)
-#     while quantity == 0:# size
+# def random_number(rang_e = 10):
+#     now = datetime.now()
+#     if 0 < rang_e <= 10:
+#         random_num = now.second // 10
+#     if 10 < rang_e < 100:
+#         random_num = now.second
+
+#     return random_num
+# def rnd(r_s, r_e):
+#     r = []
+#     for i in range(r_s, r_e + 1):
+#         sleep(1)
+#         r.append(random_number(i))
+#     for j in range(r_e, r_s, - 1):
+#         r.append(random_number(j))
+
+#     return r
+
+# print(random_number())
+# print(rnd(1, 10))
 
 # print('40.Определить, присутствует ли в заданном списке строк, некоторое число.')
 
@@ -260,7 +309,8 @@ new_text = 'При первом вызове, func (3, 7), параметр a п
 
 # print('44. В заданном списке вещественных чисел найдите разницу между максимальным и минимальным\
 #         значением дробной части элементов. Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19.')
-# real_numbers = [1.1, 1.3, 3.1, 5, 10.012]
+
+# real_numbers = [1.13, 1.34, 3.001, 5, 10.012]
 
 # def max_and_min_fractional_part(real_lst):
 #     new_real_list = [round(i - int(i), 4) for i in real_lst]
@@ -294,13 +344,13 @@ new_text = 'При первом вызове, func (3, 7), параметр a п
 # print('46. Дано число. Составить список чисел Фибоначчи, в том числе для отрицательных индексов.')
 
 # def fibonachi(n):
-#     if n in [-2, -1, 0, 1, 2]: return 1
-#     if n > 0: return fibonachi(n - 1) + fibonachi(n - 2) не раб с отриц
-#     if n < 0: return ((-1) ** n + 1) * (fibonachi(n - 1) + fibonachi(n - 2))
+#     if n in [0, 1]: return 1
+#     if n > 0: return fibonachi(n - 1) + fibonachi(n - 2) # не раб с отриц
+#     if n < 0: return (fibonachi(n + 2) - fibonachi(n + 1))
 
 # def list_of_number_fibonachi(s_N, e_N):
 #     number_fibonachi = []
-#     for i in range(s_N, e_N, -1):
+#     for i in range(s_N, e_N):
 #         number_fibonachi.append(fibonachi(i))    
 #     return number_fibonachi
 
@@ -371,17 +421,26 @@ new_text = 'При первом вызове, func (3, 7), параметр a п
 
 # print('49. Найти НОК двух чисел')
 
+# def great_common_div(number_1, number_2):
+#     if number_1 == number_2: return number_1
+#     elif number_1 > number_2: return great_common_div(number_1 - number_2, number_2)
+#     elif number_1 < number_2: return great_common_div(number_1, number_2 - number_1)
+
 # def smallest_common_multiple(a, b):
-#     noc = lcm(a, b)
-#     print('НОК 1 =', noc)
-#     c, d = a, b
-#     while a != b:
-#         if a > b: a -= b
-#         else: b -= a    
-#     nod_1 = b
-#     print('НОД =', nod_1) 
-#     noc_2 = round((c*d) / nod_1)
-#     print('НОК 2 =', noc_2)
+#     # noc = lcm(a, b) # с использ библиотеки
+#     # print('НОК 1 =', noc)
+
+#     # c, d = a, b способ 1
+#     # while a != b:
+#     #     if a > b: a -= b
+#     #     else: b -= a    
+#     # nod_1 = b
+#     # noc_2 = round((c*d) / nod_1)
+#     # print('НОК 2 =', noc_2)
+
+#     nod = great_common_div(a, b) # способ 2 с использованием рекурсии
+#     noc_3 = (a * b) // nod
+#     print('НОК 3 =', noc_3)
 
 # A = int(input('Введите число А: '))
 # B = int(input('Введите число B: '))
