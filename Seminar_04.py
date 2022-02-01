@@ -1,5 +1,7 @@
 # Семинар 04 31.01.2022
 
+from Seminar_03 import new_text
+
 # print('41. Определить, позицию второго вхождения строки в списке либо сообщить, что его нет.')
 
 # def clear_any_text(text_old):
@@ -190,10 +192,10 @@
 
 # print('49. Найти НОК двух чисел')
 
-def great_common_div(number_1, number_2):
-    if number_1 == number_2: return number_1
-    elif number_1 > number_2: return great_common_div(number_1 - number_2, number_2)
-    elif number_1 < number_2: return great_common_div(number_1, number_2 - number_1)
+# def great_common_div(number_1, number_2):
+#     if number_1 == number_2: return number_1
+#     elif number_1 > number_2: return great_common_div(number_1 - number_2, number_2)
+#     elif number_1 < number_2: return great_common_div(number_1, number_2 - number_1)
 
 # def smallest_common_multiple(a, b):
 #     # noc = lcm(a, b) # с использ библиотеки
