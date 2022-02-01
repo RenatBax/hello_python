@@ -57,7 +57,12 @@ def the_number_of_occurrences_of_one_string_in_another(s_1, s_2):
                     count += 1           
         u += 1
     return (count // u) // u
-    
+
+string_1 = input('Введите любое предложение: ')
+string_2 = input('Введите еще раз любое предложение: ')
+print(the_number_of_occurrences_of_one_string_in_another\
+    (string_1, string_2))
+
 #     return s_1.count(s_2) решение с помощью библиотеки
 
 # def the_number_of_occurrences_of_one_string_in_another_2(s_1, s_2):
@@ -82,13 +87,8 @@ def the_number_of_occurrences_of_one_string_in_another(s_1, s_2):
 #         i += 1 
 #     return count
 
-string_1 = input('Введите любое предложение: ')
-string_2 = input('Введите еще раз любое предложение: ')
-print(the_number_of_occurrences_of_one_string_in_another\
-    (string_1, string_2))
-
-print(the_number_of_occurrences_of_one_string_in_another_2\
-    (string_1, string_2))
+# print(the_number_of_occurrences_of_one_string_in_another_2\
+#     (string_1, string_2))
 
 print('34. Подсчитать сумму цифр в вещественном числе.')
 
@@ -128,7 +128,7 @@ print('37.Задать список из N элементов, заполнен�
       Найти произведение элементов на указанных позициях. \
       Позиции хранятся в файле file.txt в одной строке одно число .')
 
-Задать список из N элементов, заполненных числами из [-N, N]
+# Задать список из N элементов, заполненных числами из [-N, N]
 def create_list_number(N = 10): 
     return [randint(-N, N) for i in range(N)]
 # Позиции хранятся в файле file.txt в одной строке одно число 
@@ -162,7 +162,7 @@ lst = [2, 8, 4, 3, 1, 5]
 shuffle(lst) 
 print(lst)
 
-Рабочий
+# Рабочий
 def shuffling_the_list(mixed):
     count = len(mixed) # // 2
     while count >= 0:
@@ -175,7 +175,7 @@ def shuffling_the_list(mixed):
     
 print(shuffling_the_list(lst))
 
-Хромающий
+# Хромающий
 count = len(lst) // 2
 while count >= 0:
     count1 = randint(0, len(lst)-1)
