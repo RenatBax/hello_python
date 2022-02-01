@@ -44,3 +44,8 @@ make_an_integer(m)
         # - [-3; 3], f(x) = |x| - 1
         # - [-10; -2], f(x) = 1/x + 0.6
         # - [-4; 3], f(x) = Cos(|π*x|)
+
+# def function(a, b):
+#     f = abs(x) - 1
+#     f_2 = 1 / x + 0.6
+#     f_3 = fcos(abs(pi * x))
