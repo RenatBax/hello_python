@@ -1,5 +1,6 @@
 # Семинар 04 31.01.2022
 
+from math import sqrt
 from Seminar_03 import new_text
 
 # print('41. Определить, позицию второго вхождения строки в списке либо сообщить, что его нет.')
@@ -230,9 +231,22 @@ from Seminar_03 import new_text
 # t = specified_accuracy(n)
 # print(t)
 
-# a = -12345.45678
+# a = -12345.45678789946
 # print(f'{a:.3f}')
-# f = a - round(a)
+
+# print(a)
+# m = a % 1
+# print(m)
+# int: str(1)
+
+# str: 1
+
+
+# #str: '2' = int(10000)
+# print(m * '1')
+
+
+# f = (a - round(a))
 # print('f',  f)
 # l = a - f
 # print('l',  l)
@@ -247,8 +261,42 @@ from Seminar_03 import new_text
 # k = l + -e
 # print('k',  k)
 
-print('51. Составить список простых множителей натурального числа N')
+# print('51. Составить список простых множителей натурального числа N')
+
+# def get_simple_list():
+#     N = sqrt(30000)
+#     list_prime_number = []
+#     list_number = [number for number in range(2, int(N) + 1)]
+#     for number in list_number:
+#         for i in range(2, number):
+#             if not number % i: break
+#         else: list_prime_number.append(number)
+#     return list_prime_number
+
+# def binary_searсh(any_list, any_number):
+#     idx = 0
+#     size = len(any_list)
+#     while idx != size:
+#         search = (idx + size) // 2
+#         if any_number == any_list[search]: return True
+#         if any_number < any_list[search]: size = search
+#         else: idx = search + 1
+#     return False
 
 # def list_of_prime_factors_of_natural_number(N):
+#     prime_factors = []
+#     list_prime = get_simple_list() 
+#     res = binary_searсh(list_prime, N)
+#     if res == True: prime_factors.append(N)
+#     else:
+#         for i in list_prime:
+#             while not N % i:
+#                 N /= i
+#                 prime_factors.append(i)
+#             if N == 1: break 
     
+#     if N > list_prime[-1]: prime_factors.append(int(N)) 
+#     return prime_factors
 
+# n = 61567
+# print(list_of_prime_factors_of_natural_number(n))

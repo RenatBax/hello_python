@@ -26,16 +26,16 @@
         # единиц и сотых m
         # сотен и десятых m
 
-def make_an_integer(real_numb):
-    str_numb = str(real_numb)
-    clear_numb = str_numb.replace('.', '')
-    int_10 = int(clear_numb[2:7])
-    int_1 = int(clear_numb[3:7])
-    int_100 = int(clear_numb[1:6])
-    return int_10, int_1, int_100
+# def make_an_integer(real_numb):
+#     str_numb = str(real_numb)
+#     clear_numb = str_numb.replace('.', '')
+#     int_10 = int(clear_numb[2:6])
+#     int_1 = int(clear_numb[3:6])
+#     int_100 = int(clear_numb[1:5])
+#     return int_10, int_1, int_100
 
-m = int(input('Введите положительное вещественное число: '))
-make_an_integer(m)
+# m = float(input('Введите положительное вещественное число: '))
+# print(make_an_integer(m))
 
 # Задача 2
 # Написать программу, вычисляющую значение периодической функции f(x), 
@@ -49,3 +49,19 @@ make_an_integer(m)
 #     f = abs(x) - 1
 #     f_2 = 1 / x + 0.6
 #     f_3 = fcos(abs(pi * x))
+
+
+
+
+# Задача 4
+# Даны координаты концов двух отрезков [a; b], [c; d]. Верно ли, что
+        # отрезки не пересекаются
+        # отрезки пересекаются строго в одной точке
+        # один отрезок вложен в другой
+
+
+# Задача 5
+# Проверить, что натуральное число m
+        # является счастливым пятизначным
+        # образовано тремя цифрами, составляющими арифметическую прогрессию
+        # образовано четырмя одинаковыми цифрами
