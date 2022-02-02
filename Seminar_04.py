@@ -33,6 +33,16 @@ from Seminar_03 import new_text
 # print(position_of_second_occurrence_string_in_list\
 #     (new_text, string_2))
 
+# lst = ['sdf', 'serwerjhsd', 'sd234345', 'sdfsd', 'sdfsdf']
+# sub_str = 'sdf'
+# in_list = 0
+# for i , item in enumerate(lst):
+#     pos = item.find(sub_str)
+#     if pos != -1:
+#         in_list += 1
+#     if in_list == 2:
+#         print(i)
+
 # print('42. Найти сумму чисел списка стоящих на нечетной позиции.')
 #                0  1  2  3    4  5  6    7  8
 # simply_list = [3, 1, 7, 56, -3, 5, 89, -9, 11, 4]
@@ -44,6 +54,8 @@ from Seminar_03 import new_text
 
 # sum_number = sum_number_in_an_odd_position(simply_list)
 # print('Summary =', sum_number)
+
+# print(sum([item if i % 2 else 0 for i, item in enumerate(simply_list)])) 
 
 # print('43. Найти произведение пар чисел в списке. Парой считаем первый и последний элемент, \
 #         второй и предпоследний и т.д. Пример: [2, 3, 4, 5, 6] => [12, 15, 16]; [2, 3, 5, 6] => [12, 15].')
@@ -79,6 +91,9 @@ from Seminar_03 import new_text
 
 # print(product_of_pairs_of_numbers_in_list_2(simply_list))
 
+# list_len = len(simply_list)
+# print([simply_list[i] * simply_list[list_len - i - 1] for i in range(0, list_len // 2 + 1)])
+
 # print('44. В заданном списке вещественных чисел найдите разницу между максимальным и минимальным\
 #         значением дробной части элементов. Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19.')
 
@@ -94,6 +109,10 @@ from Seminar_03 import new_text
 #     return max_N - min_N
 
 # print(max_and_min_fractional_part(real_numbers))
+
+# float_list = [round(item % 1, 2) for item in real_numbers]
+# print(float_list)
+# print(f'{max(float_list) - min(float_list) : .2f}'
 
 # print('45. Написать программу преобразования десятичного числа в двоичное.')
 

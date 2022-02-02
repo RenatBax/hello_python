@@ -176,13 +176,13 @@ new_text = 'При первом вызове, func (3, 7), параметр a п
 # print(shuffling_the_list(lst))
 
 # # Хромающий
-# count = len(lst) // 2
-# while count >= 0:
-#     count1 = randint(0, len(lst)-1)
-#     temp = lst[count1]
-#     lst.insert(count1, lst.pop(temp))
-#     count -= 1
-# print(lst)
+# new_lst = []
+# count = len(lst)
+# for i in range(1, count + 1):
+#     count1 = randint(0, count-1)
+#     new_lst.append(lst.pop(count1))
+#
+# print(new_lst)
 
 # print('39.Реализовать алгоритм задания случайных чисел. \
 #       Без использования встроенного генератора псевдослучайных чисел.')
