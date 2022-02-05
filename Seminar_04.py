@@ -257,8 +257,8 @@ from Seminar_03 import new_text
 # def round2(real_numb, d = 3):
 #     disc_round = \
 #         {
-#             1: 0.1
-#             2: 0,01,
+#             1: 0.1,
+#             2: 0.01,
 #             3: 0.001,
 #             4: 0.0001,
 #             5: 0.00001,
@@ -269,12 +269,12 @@ from Seminar_03 import new_text
 #             10: 0.0000000001
 #         }
 
-#     v = disc_round[d]
-#     d = str(real_numb / v)
-#     idx = d.find('.')
-#     s = int(d[:idx])
-#     n = s * v
-#     return n
+#     kf = disc_round[d]
+#     s_r_n = str(real_numb / kf)
+#     idx = s_r_n.find('.')
+#     i_r_n = int(s_r_n[:idx])
+#     round_number = i_r_n * kf
+#     return round_number
 
 # print(round2(pi, 3))
 
