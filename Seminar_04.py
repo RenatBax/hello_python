@@ -254,7 +254,7 @@ from Seminar_03 import new_text
 # print(f'{real_numb}')
 # print(f'{real_numb:.3f}')
 
-# def round2(real_numb, d = 3):
+# def round_my(real_numb, d = 3):
 #     disc_round = \
 #         {
 #             1: 0.1,
@@ -268,15 +268,11 @@ from Seminar_03 import new_text
 #             9: 0.000000001,
 #             10: 0.0000000001
 #         }
-
-#     kf = disc_round[d]
-#     s_r_n = str(real_numb / kf)
+#     s_r_n = str(real_numb / disc_round[d])
 #     idx = s_r_n.find('.')
-#     i_r_n = int(s_r_n[:idx])
-#     round_number = i_r_n * kf
-#     return round_number
+#     return int(s_r_n[:idx]) * disc_round[d]
 
-# print(round2(pi, 3))
+# print(round_my(pi, 3))
 
 # print('51. Составить список простых множителей натурального числа N')
 
