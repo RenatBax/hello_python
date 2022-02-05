@@ -257,6 +257,8 @@ from Seminar_03 import new_text
 # def round2(real_numb, d = 3):
 #     disc_round = \
 #         {
+#             1: 0.1
+#             2: 0,01,
 #             3: 0.001,
 #             4: 0.0001,
 #             5: 0.00001,
