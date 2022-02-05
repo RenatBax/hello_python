@@ -34,15 +34,15 @@ new_text = 'При первом вызове, func (3, 7), параметр a п
 # print('32. Для натурального N создать словарь индекс-значение, \
 #     состоящий из элементов последовательности 3k + 1.')
 
-# def d_N(N):
-#     dictionary_2 = {k: (3 * k) + 1 for k in range(1, N + 1)}
-#     dictionary_N = {}
-#     for k in range(1, N + 1):
-#         res = (3 * k) + 1
-#         dictionary_N[k] = res
-#     return dictionary_N, dictionary_2
+def d_N(N):
+    dictionary_2 = {k: (3 * k) + 1 for k in range(1, N + 1)}
+    dictionary_N = {}
+    for k in range(1, N + 1):
+        res = (3 * k) + 1
+        dictionary_N[k] = res
+    return dictionary_N, dictionary_2
     
-# print(d_N(5))
+print(d_N(5))
 
 # print('33. Пользователь задаёт две строки. \
 #     Определить количество вхождений одной строки в другой.')

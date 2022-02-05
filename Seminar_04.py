@@ -1,6 +1,6 @@
 # Семинар 04 31.01.2022
 
-from math import sqrt
+from math import pi, sqrt
 from Seminar_03 import new_text
 
 # print('41. Определить, позицию второго вхождения строки в списке либо сообщить, что его нет.')
@@ -250,35 +250,31 @@ from Seminar_03 import new_text
 # t = specified_accuracy(n)
 # print(t)
 
-# a = -12345.45678789946
-# print(f'{a:.3f}')
+# real_numb = -12345.45678789946896666
+# print(f'{real_numb}')
+# print(f'{real_numb:.3f}')
 
-# print(a)
-# m = a % 1
-# print(m)
-# int: str(1)
+# def round2(real_numb, d = 3):
+#     disc_round = \
+#         {
+#             3: 0.001,
+#             4: 0.0001,
+#             5: 0.00001,
+#             6: 0.000001,
+#             7: 0.0000001,
+#             8: 0.00000001,
+#             9: 0.000000001,
+#             10: 0.0000000001
+#         }
 
-# str: 1
+#     v = disc_round[d]
+#     d = str(real_numb / v)
+#     idx = d.find('.')
+#     s = int(d[:idx])
+#     n = s * v
+#     return n
 
-
-# #str: '2' = int(10000)
-# print(m * '1')
-
-
-# f = (a - round(a))
-# print('f',  f)
-# l = a - f
-# print('l',  l)
-# s = str(f)
-# print('s',  s)
-# r = s[3:6]
-# print('r',  r)
-# i = float(r)
-# print('i',  i)
-# e = i/1000
-# print('e',  e)
-# k = l + -e
-# print('k',  k)
+# print(round2(pi, 3))
 
 # print('51. Составить список простых множителей натурального числа N')
 
