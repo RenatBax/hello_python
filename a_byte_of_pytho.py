@@ -124,12 +124,29 @@ from random import randint
 #     return(list[int(index_res)])
 # print('Ваше число:' + my_bot_random())
 
-k = 5
-equation_str = reduce(lambda x,y:  x+y, [str(i) + '**x' + str(random.randint(0, 100)) + ' + ' for i in range(k + 1)])
-print(equation_str)
-equation_str = equation_str[-4: -len(equation_str) - 1: -1]
-equation_str += ' = 0'
-print(equation_str)
-with open('ex53.txt', 'w') as file:
-    file.write(equation_str)
+# k = 5
+# equation_str = reduce(lambda x,y:  x+y, [str(i) + '**x' + str(random.randint(0, 100)) + ' + ' for i in range(k + 1)])
+# print(equation_str)
+# equation_str = equation_str[-4: -len(equation_str) - 1: -1]
+# equation_str += ' = 0'
+# print(equation_str)
+# with open('ex53.txt', 'w') as file:
+#     file.write(equation_str)
 
+import re
+d1 = 'абвпро'
+d2 = 'aaaba'
+pat = r'\Аб+в\Z'
+m1 = re.match(pat, d1)
+b1 = m1 is not None
+print(b1)
+m2 = re.fullmatch(pat, d2)
+b2 = m2 is not None
+print(b2)
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/svautoz/calc.git
+git push -u origin main

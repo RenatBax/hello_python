@@ -131,7 +131,7 @@
 # f(x) => x + 10
 # map(f, [1, 2, 3]) => [11, 12, 13] нельзя пройтись дважды!!!!
 
-# li = [x for x in range(1, 20)]
+# li = [x for x in range(1, 20)]         
 # li = list(map(lambda x: x + 10, li))
 # print(li)
 
@@ -179,16 +179,16 @@
 # zip ([1, 2, 3], ['о', 'а', 'ч'], ['j', 'h', 'n'])
 #     [(1, 'о', 'j'), (2, 'а', 'h'), (3, 'ч', 'n')] нельзя пройтись дважды!!!!
 
-users = ['user1', 'user2', 'user3', 'user4', 'user5']
-ids = [4, 5, 9, 14, 7]
-salary = [111, 222, 333]
-data = list(zip(users, ids))
-print(data)
-data2 = list(zip(users, ids, salary))
-print(data2)
+# users = ['user1', 'user2', 'user3', 'user4', 'user5']
+# ids = [4, 5, 9, 14, 7]
+# salary = [111, 222, 333]
+# data = list(zip(users, ids))
+# print(data)
+# data2 = list(zip(users, ids, salary))
+# print(data2)
 
 # # Функция enumerate - применяется к итерируему объекту и возвращает \
-# # новый итератор с кортежами из индекмы и жлементов входных данных
+# # новый итератор с кортежами из индексов и элементов входных данных
 # # нельзя пройтись дважды!!!!
 
 # data = list(enumerate(salary))
