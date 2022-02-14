@@ -143,6 +143,3 @@ from random import randint
 # m2 = re.fullmatch(pat, d2)
 # b2 = m2 is not None
 # print(b2)
-
-msg = 'Hello World'
-print(msg)
