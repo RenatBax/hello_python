@@ -133,20 +133,16 @@ from random import randint
 # with open('ex53.txt', 'w') as file:
 #     file.write(equation_str)
 
-import re
-d1 = 'абвпро'
-d2 = 'aaaba'
-pat = r'\Аб+в\Z'
-m1 = re.match(pat, d1)
-b1 = m1 is not None
-print(b1)
-m2 = re.fullmatch(pat, d2)
-b2 = m2 is not None
-print(b2)
+# import re # тренировка по задаче 
+# d1 = 'абвпро'
+# d2 = 'aaaba'
+# pat = r'\Аб+в\Z'
+# m1 = re.match(pat, d1)
+# b1 = m1 is not None
+# print(b1)
+# m2 = re.fullmatch(pat, d2)
+# b2 = m2 is not None
+# print(b2)
 
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/svautoz/calc.git
-git push -u origin main
+msg = 'Hello World'
+print(msg)
