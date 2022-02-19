@@ -143,3 +143,24 @@ from random import randint
 # m2 = re.fullmatch(pat, d2)
 # b2 = m2 is not None
 # print(b2)
+
+from user_interface import export_console, export_console_2
+
+data = 'file.csv'
+
+def read_csv(v = 1): # Не знаю как бyдет организация выбора строчек и столбцов
+    if v == 1:    
+        with open(data, 'r') as dt:
+            for item in dt:
+                export_console(item.split(';'))
+    else: 
+        with open(data, 'r') as dt:
+            for item in dt:
+                line_dt = item.split(';')
+                dic = {
+                    'Имя': line_dt[0],
+                    'Фамилия': line_dt[1],
+                    'Телефон' : line_dt[2],
+                    'Коментарий': line_dt[3]}
+                export_console_2(dic)
+        
